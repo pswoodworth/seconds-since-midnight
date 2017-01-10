@@ -72,7 +72,7 @@ module.exports = {
     return {
       hours: String(hours),
       minutes: String(minutes),
-      meridian
+      meridian: meridian
     };
     
   }
