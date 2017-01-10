@@ -34,7 +34,7 @@ toSeconds( -1, '00', 'AM' ) === toSeconds( 11, '00', 'PM' )
 toSeconds( '13', '05', 'AM' ) === toSeconds( 1, '05', 'PM' )
 // true
 
-// going the toher direction it returns an object
+// going the other direction it returns an object
 toReadableTime( 11700 )
 // { hours: '3', minutes: '15', meridian: 'AM' }
 
