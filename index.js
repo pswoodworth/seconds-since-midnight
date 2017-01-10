@@ -1,5 +1,5 @@
 'use strict';
-const SECONDS_IN_DAY = 86400;
+var SECONDS_IN_DAY = 86400;
 
 module.exports = {
    toSeconds: function(){
@@ -21,7 +21,7 @@ module.exports = {
     meridian = meridian.toUpperCase();
 
     if( meridian !== 'AM' && meridian !== 'PM' ){
-      throw new Error('meridian must be a string of either "AM" or "PM"');
+      console.warn('meridian must be a string of either "AM" or "PM"');
     }
 
     // convert to 24 hour
