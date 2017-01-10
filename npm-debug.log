@@ -1,0 +1,112 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.9
+3 info using node@v7.2.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/pswoodworth/Projects/seconds-since-midnight',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/pswoodworth/.npm/seconds-since-midnight/1.0.3/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/pswoodworth/.npm correctMkdir not in flight; initializing
+10 info lifecycle seconds-since-midnight@1.0.3~prepublish: seconds-since-midnight@1.0.3
+11 silly lifecycle seconds-since-midnight@1.0.3~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/pswoodworth/.npm/seconds-since-midnight/1.0.3/package.tgz',
+12 verbose tar pack   '/Users/pswoodworth/Projects/seconds-since-midnight' ]
+13 verbose tarball /Users/pswoodworth/.npm/seconds-since-midnight/1.0.3/package.tgz
+14 verbose folder /Users/pswoodworth/Projects/seconds-since-midnight
+15 verbose addLocalTarball adding from inside cache /Users/pswoodworth/.npm/seconds-since-midnight/1.0.3/package.tgz
+16 verbose correctMkdir /Users/pswoodworth/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd seconds-since-midnight@1.0.3
+18 verbose afterAdd /Users/pswoodworth/.npm/seconds-since-midnight/1.0.3/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/pswoodworth/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/pswoodworth/.npm/seconds-since-midnight/1.0.3/package/package.json written
+21 silly publish { name: 'seconds-since-midnight',
+21 silly publish   version: '1.0.3',
+21 silly publish   description: 'A super simple library for converting seconds since midnight to hours-minutes-seconds-am/pm and back',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'mocha --compilers js:babel-core/register' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/pswoodworth/seconds-since-midnight.git' },
+21 silly publish   keywords: [ 'time', 'seconds', 'formatting' ],
+21 silly publish   author: { name: 'pswoodworth' },
+21 silly publish   license: 'ISC',
+21 silly publish   bugs: { url: 'https://github.com/pswoodworth/seconds-since-midnight/issues' },
+21 silly publish   homepage: 'https://github.com/pswoodworth/seconds-since-midnight#readme',
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-core': '^6.21.0',
+21 silly publish      'babel-preset-es2015': '^6.18.0',
+21 silly publish      chai: '^3.5.0',
+21 silly publish      mocha: '^3.2.0' },
+21 silly publish   readme: '# seconds-since-midnight\nA super simple library for converting seconds since midnight to hours-minutes-seconds-am/pm and back.\n\nSeconds since midnight can be a convenient way to store a time of day (without a date) but there isn\'t much support for handling these values the way there is for date and time objects, like `Date()` and moment.js.\n\nSo this tiny zero-dependancy library will help you do conversions like \n\n```js\ntoSeconds(\'03\', \'15\', \'AM\')\n// 11700\ntoReadableTime(50600)\n// { hours: \'2\', minutes: \'05\', meridian: \'PM\' }\n```\n\nYep, that\'s all it does.\n\n\n```\nnpm install seconds-since-midnight --save\n```\n\n```js\nimport { toSeconds, toReadableTime } from \'seconds-since-midnight\'\n// or const { toSeconds, toReadableTime } = require(\'seconds-since-midnight\')\n\n// supports strings or numbers for hours and minutes and any capitalization for AM/PM\ntoSeconds( 2, \'05\', \'pm\' )\n// 50700\n\n// supports negative values to handle wrapping back around when incrementing/decrementing\ntoSeconds( -1, \'00\', \'AM\' ) === toSeconds( 11, \'00\', \'PM\' )\n// true\n\n// and values greater than 12 hours/60 minutes to support wrapping the other way\ntoSeconds( \'13\', \'05\', \'AM\' ) === toSeconds( 1, \'05\', \'PM\' )\n// true\n\n// going the other direction it returns an object\ntoReadableTime( 11700 )\n// { hours: \'3\', minutes: \'15\', meridian: \'AM\' }\n\n\n// it will roll with it if it recieves a negative value or a value greater than one day\ntoReadableTime( 91800 ) // 25.5 hours\n// { hours: \'1\', minutes: \'30\', meridian: \'AM\' }\n\ntoReadableTime( -3600 ) // -1 hour\n// { hours: \'11\', minutes: \'00\', meridian: \'PM\' }\n\n\n```\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '116ced9f2c2845e4c99b3832bc05c1a62daeae21',
+21 silly publish   _id: 'seconds-since-midnight@1.0.3',
+21 silly publish   _shasum: 'a062733c377f11f7dfceda9fc14839915138c27b',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name seconds-since-midnight
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'seconds-since-midnight',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'seconds-since-midnight',
+26 silly mapToRegistry   name: 'seconds-since-midnight',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/seconds-since-midnight
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/pswoodworth/.npm/seconds-since-midnight/1.0.3/package.tgz
+30 verbose request uri https://registry.npmjs.org/seconds-since-midnight
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 1:23:57 PM
+33 verbose request using bearer token for auth
+34 verbose request id 4e418240a87425a8
+35 http request PUT https://registry.npmjs.org/seconds-since-midnight
+36 http 403 https://registry.npmjs.org/seconds-since-midnight
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 10 Jan 2017 18:23:56 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-bos8220-BOS',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1484072635.737061,VS0,VE918',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/pswoodworth/.npm/registry.npmjs.org/seconds-since-midnight on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.3." : seconds-since-midnight
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid seconds-since-midnight
+43 verbose cwd /Users/pswoodworth/Projects/seconds-since-midnight
+44 error Darwin 15.6.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v7.2.0
+47 error npm  v3.10.9
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.3." : seconds-since-midnight
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
