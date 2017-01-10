@@ -13,7 +13,7 @@ module.exports = {
     // convert to 24 hour
     if( hours === 12 && meridian === 'AM' ){
       hours = 0;
-    }else if( meridian === 'PM' ){
+    }else if( hours !== 12 && meridian === 'PM' ){
       hours += 12;
     }
     
