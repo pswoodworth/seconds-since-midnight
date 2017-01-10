@@ -1,0 +1,30 @@
+{
+  "name": "seconds-since-midnight",
+  "version": "1.0.0",
+  "description": "A super simple library for converting seconds since midnight to hours-minutes-seconds-am/pm and back",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pswoodworth/seconds-since-midnight.git"
+  },
+  "keywords": [
+    "time",
+    "seconds",
+    "formatting"
+  ],
+  "author": "pswoodworth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pswoodworth/seconds-since-midnight/issues"
+  },
+  "homepage": "https://github.com/pswoodworth/seconds-since-midnight#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-es2015": "^6.18.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
