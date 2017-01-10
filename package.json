@@ -1,6 +1,6 @@
 {
   "name": "seconds-since-midnight",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A super simple library for converting seconds since midnight to hours-minutes-seconds-am/pm and back",
   "main": "index.js",
   "scripts": {
