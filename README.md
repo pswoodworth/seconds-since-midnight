@@ -20,7 +20,8 @@ npm install seconds-since-midnight --save
 ```
 
 ```js
-import { toSeconds, toReadableTime } from 'seconds-since-mindnight'
+import { toSeconds, toReadableTime } from 'seconds-since-midnight'
+// or const { toSeconds, toReadableTime } = require('seconds-since-midnight')
 
 // supports strings or numbers for hours and minutes and any capitalization for AM/PM
 toSeconds( 2, '05', 'pm' )
