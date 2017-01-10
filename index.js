@@ -32,7 +32,7 @@ export function toReadableTime(seconds){
   seconds = Number(seconds) % SECONDS_IN_DAY;
   
   if( seconds < -1 ){
-    value = SECONDS_IN_DAY - (Math.abs(value) % SECONDS_IN_DAY);
+    seconds = SECONDS_IN_DAY - (Math.abs(seconds) % SECONDS_IN_DAY);
   }
   
   let hours = Math.floor(seconds/60/60);
