@@ -39,3 +39,22 @@ describe('To values from seconds', () => {
 });
 
 
+describe('Round trip conversion', () => {
+  const tests = [
+    { value: { hours: '2', minutes: '05', meridian: 'PM' }, expected: { hours: '2', minutes: '05', meridian: 'PM' } },   
+    { value: { hours: '12', minutes: '00', meridian: 'AM' },     expected: { hours: '12', minutes: '00', meridian: 'AM' } },     
+    { value: { hours: '13', minutes: '15', meridian: 'AM' },   expected: { hours: '1', minutes: '15', meridian: 'PM' } },   
+    { value: { hours: '13', minutes: '15', meridian: 'PM' }, expected: { hours: '1', minutes: '15', meridian: 'AM' } }
+    { value: { hours: '12', minutes: '60', meridian: 'PM' }, expected: { hours: '1', minutes: '15', meridian: 'AM' } }
+  ];
+  tests.forEach(function(test) {
+    it(`should convert ${Object.values(test.value)} to value`, () => {
+      expect( 
+        toReadableTime(toSeconds(test.value))
+      ).to.deep.equal( test.expected );
+    });
+  });
+});
+
+
+
